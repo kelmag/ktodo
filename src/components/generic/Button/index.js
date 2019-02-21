@@ -2,16 +2,15 @@ import React from 'react';
 import { Button, Text } from 'native-base';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-const INPUT_HEIGHT = 40;
+const INPUT_HEIGHT = 50;
 
 const styles = EStyleSheet.create({
   button: {
-    width: '50%',
+    minHeight: 20,
     height: INPUT_HEIGHT,
     backgroundColor: '#FE4242',
     alignSelf: 'center',
-    borderRadius: 35,
-    marginTop: 60,
+    borderRadius: 60,
   },
   text: {
     textAlign: 'center',

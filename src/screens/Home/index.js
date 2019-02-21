@@ -1,7 +1,6 @@
 import React from 'react';
-
-import { Container, View } from 'native-base';
 import EStyleSheet from 'react-native-extended-stylesheet';
+import { Container, View } from 'native-base';
 import { Button, Logo } from '../../components';
 
 const styles = EStyleSheet.create({
@@ -14,11 +13,14 @@ const styles = EStyleSheet.create({
   },
 });
 
-const Home = props => (
-  <Container style={styles.container}>
-    <Logo source={require('../../images/Logo.png')} />
-    <Button text="press me " onPress={() => props.navigation.navigate('Todo')} />
-  </Container>
-);
+const Home = (props) => {
+  const { navigation } = props;
+  return (
+    <Container style={styles.container}>
+      <Logo source={require('../../images/Logo.png')} />
+      <Button text="press me " onPress={() => navigation.navigate('Todo')} />
+    </Container>
+  );
+};
 
 export default Home;
